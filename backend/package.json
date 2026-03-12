@@ -2,17 +2,19 @@
   "name": "backend",
   "version": "1.0.50",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "bun run --watch src/index.ts"
+    "dev": "bun run --watch src/index.ts",
+    "start": "bun run src/index.ts",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate deploy"
   },
   "dependencies": {
-    "@prisma/adapter-libsql": "^7.4.2",
-    "@prisma/client": "^7.4.2",
+    "@prisma/adapter-libsql": "^7.5.0",
+    "@prisma/client": "^7.5.0",
     "elysia": "latest"
   },
   "devDependencies": {
     "bun-types": "latest",
-    "prisma": "^7.4.2"
+    "prisma": "^7.5.0"
   },
   "module": "src/index.js"
 }

@@ -18,8 +18,15 @@ model tb_user {
   google_uid String  @unique
   email      String  @unique
   name       String?
-
+  role       Role    @default(USER)
   detail tb_detail_user?
+}
+
+enum Role {
+  USER
+  CASHIER
+  STAFF
+  ADMIN
 }
 
 model tb_detail_user {
